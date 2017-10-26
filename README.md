@@ -18,7 +18,7 @@ This library aims to provide pre-build fetch methods for each environment:
 Install using the following:
 
 ```shell
-npm install universal-fetch --save
+npm install the-fetch-you-were-looking-for --save
 ```
 
 This library supports NodeJS version 6 and above.
