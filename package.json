@@ -1,6 +1,6 @@
 {
   "name": "universal-fetch",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Universal JavaScript fetch utility for NodeJS, Browsers and React-Native",
   "main": "source/index.js",
   "scripts": {
