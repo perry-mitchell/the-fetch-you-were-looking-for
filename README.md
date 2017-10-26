@@ -1,4 +1,4 @@
-# universal-fetch
+# universal-fetch (aka. the-fetch-you-were-looking-for)
 Universal JavaScript fetch utility for NodeJS, Browsers and React-Native*
 
 _* React-Native coming soon_
