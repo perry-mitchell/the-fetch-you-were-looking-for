@@ -1,5 +1,5 @@
 {
-  "name": "universal-fetch",
+  "name": "the-fetch-you-were-looking-for",
   "version": "0.1.0",
   "description": "Universal JavaScript fetch utility for NodeJS, Browsers and React-Native",
   "main": "source/index.js",
