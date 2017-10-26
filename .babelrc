@@ -1,0 +1,25 @@
+{
+    "env": {
+        "node": {
+            "presets": [
+                ["env", {
+                    "targets": {
+                        "node": "6.11"
+                    }
+                }]
+            ]
+        },
+        "web": {
+            "presets": [
+                ["env", {
+                    "targets": {
+                        "browsers": [
+                            "last 2 major versions",
+                            "not ie < 10"
+                        ]
+                    }
+                }]
+            ]
+        }
+    }
+}
