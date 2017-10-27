@@ -20,6 +20,10 @@
     "test:web": "concurrently -k -n 'server,karma' -s first 'npm run serve:test' 'cross-env BABEL_ENV=web karma start'",
     "test:web:watch": "concurrently -k -n 'server,karma' -s first 'npm run serve:test' 'cross-env BABEL_ENV=web karma start --watch --single-run=false'"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/perry-mitchell/the-fetch-you-were-looking-for.git"
+  },
   "keywords": [
     "fetch",
     "nodejs",
