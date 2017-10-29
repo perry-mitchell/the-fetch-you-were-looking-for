@@ -5,7 +5,7 @@ const ENV = process.env.BABEL_ENV;
 const DIST = path.resolve(__dirname, "./dist");
 const SOURCE = path.resolve(__dirname, "./source");
 
-if (["node", "web"].indexOf(ENV) === -1) {
+if (["node", "web", "react-native"].indexOf(ENV) === -1) {
     throw new Error(`Failed building: '${ENV}' is not a valid environment`);
 }
 
