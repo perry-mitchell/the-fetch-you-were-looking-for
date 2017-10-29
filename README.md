@@ -25,7 +25,43 @@ This library supports NodeJS version 6 and above.
 
 ## Usage
 
-TBA.
+This library can be used in a variety of different environments, and should be imported like such:
+
+ * **NodeJS**: `const fetch = require("the-fetch-you-were-looking-for/node.js");`
+ * **Browsers**: `import fetch from "the-fetch-you-were-looking-for/web";`
+ * **React-Native**: `import fetch from "the-fetch-you-were-looking-for/react-native";`
+
+Then use `fetch` as you would normally, taking into account some limitations (mentioned below).
+
+## Limitations
+
+This library isn't a drop-in replacement for fetch, and behaves a bit differently on some environments.
+
+### NodeJS limitations
+
+When being used on NodeJS, this library exports `node-fetch`. `node-fetch` handles `.text()` and `.json()` outputs normally, but does not support `.blob()`. It is therefore important to mention that `.blob()` is not supported _at all_ by this library (use `.buffer()` instead).
+
+Fetching with credentials also behaves differently to the browser implementation, and these differences can be found by reviewing the [`node-fetch`](https://github.com/bitinn/node-fetch) repository.
+
+### Web limitations
+
+Currently, this library only exports the browser's `fetch` method. It does however handle the result and provides the `.buffer()` response method similarly to the NodeJS implementation.
+
+### React-Native limitations
+
+When used in React-Native, this library uses `XMLHttpRequest` to polyfill `fetch`. The built-in fetch is very rough around the edges and doesn't function quite like expected. Using an XHR allows this library to return binary data in `Buffer` form.
+
+The `fetch` command itself is much simpler, and its `options` only support the following items:
+
+ * `method`: The method to use for the request
+ * `headers`: Key-value store of the headers for the request
+ * `body`: The body to send with the request. This supports `FormData` for uploading files.
+
+It also supports only several response actions:
+
+ * `.text()`: Output text (Promise -> String)
+ * `.json()`: Output JS object (Promise -> Object)
+ * `.buffer()`: Output `Buffer` (polyfilled) (Promise -> Buffer)
 
 ## Testing
 
